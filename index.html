@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Madina Jan</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  background:#061827;
+  font-family:"Courier New",monospace;
+  color:#111;
+  display:flex;align-items:center;justify-content:center;
+}
+.screen{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;
+  padding:7vh 7vw;
+}
+.title{
+  direction:ltr;
+  font-family:Arial,sans-serif;
+  font-weight:900;
+  font-size:clamp(34px,8vw,64px);
+  margin:0 0 5vh;
+  color:#fff;
+  text-shadow:3px 3px 0 #111;
+}
+.title span{color:#b9ff00}
+.paper{
+  width:min(92vw,590px);
+  height:min(67vh,650px);
+  background:#fff7f0;
+  border:4px solid #fff;
+  position:relative;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 0 3px #172938;
+}
+.hearts{
+  position:absolute;inset:0;
+  opacity:.7;
+  background-image:
+    radial-gradient(circle at 8% 12%,#ff6b72 0 3px,transparent 4px),
+    radial-gradient(circle at 22% 28%,#ff6b72 0 2px,transparent 3px),
+    radial-gradient(circle at 37% 9%,#ff6b72 0 3px,transparent 4px),
+    radial-gradient(circle at 55% 20%,#ff6b72 0 2px,transparent 3px),
+    radial-gradient(circle at 72% 10%,#ff6b72 0 3px,transparent 4px),
+    radial-gradient(circle at 91% 25%,#ff6b72 0 2px,transparent 3px),
+    radial-gradient(circle at 14% 65%,#ff6b72 0 2px,transparent 3px),
+    radial-gradient(circle at 32% 82%,#ff6b72 0 3px,transparent 4px),
+    radial-gradient(circle at 66% 75%,#ff6b72 0 2px,transparent 3px),
+    radial-gradient(circle at 86% 88%,#ff6b72 0 3px,transparent 4px);
+}
+.envelope{
+  position:relative;z-index:2;
+  width:150px;height:105px;
+  border:4px solid #ff6b55;
+  background:#ffe9df;
+  cursor:pointer;
+  box-shadow:4px 4px 0 #ff9a84;
+  transition:.15s;
+}
+.envelope:hover{transform:scale(1.05)}
+.envelope:before,.envelope:after{
+  content:"";position:absolute;top:10px;width:4px;height:105px;
+  background:#ff6b55;
+}
+.envelope:before{left:48px;transform:rotate(58deg)}
+.envelope:after{right:48px;transform:rotate(-58deg)}
+.seal{position:absolute;left:61px;top:38px;font-size:27px;z-index:3}
+.caption{
+  position:absolute;top:calc(50% + 90px);
+  font-size:18px;font-weight:bold;color:#222;
+}
+#letter,#question,#final{display:none}
+.window{
+  width:min(88vw,390px);
+  background:#ffc1c6;
+  border:8px solid #ff6b55;
+  box-shadow:8px 8px 0 #e94e42;
+  padding:0 16px 20px;
+  text-align:center;
+}
+.bar{
+  direction:ltr;
+  height:48px;
+  border-bottom:5px solid #ff6b55;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:25px;font-weight:900;color:#ff513d;
+}
+.dots{font-size:27px;letter-spacing:6px}
+.qbox{
+  margin:18px 0;
+  padding:18px 8px;
+  border:5px solid #ff6b55;
+  background:repeating-linear-gradient(45deg,#ffb0b8 0,#ffb0b8 5px,#ffbdc2 5px,#ffbdc2 10px);
+}
+.cat{font-size:75px;line-height:1}
+.question{font-family:Arial,sans-serif;font-weight:800;font-size:18px;margin:12px 0}
+.btns{position:relative;min-height:62px;display:flex;justify-content:center;align-items:center;gap:30px}
+.btn{
+  border:4px solid #ff6b55;
+  background:#fff0eb;color:#ff5a47;
+  font:900 20px "Courier New",monospace;
+  padding:7px 15px;cursor:pointer;
+}
+#no{position:relative}
+.final-paper{
+  width:min(90vw,600px);background:#fff7f0;border:5px solid #ffb2a0;
+  padding:55px 28px;text-align:center;box-shadow:8px 8px 0 #e94e42;
+}
+.final-paper h1{
+  font-family:Arial,sans-serif;font-size:clamp(28px,7vw,45px);
+  line-height:1.5;color:#ff5745;margin:0;
+}
+.final-paper p{font-family:Arial,sans-serif;font-size:21px;line-height:2;margin:25px 0 0}
+.heartbig{font-size:70px}
+.small{font-size:14px;margin-top:14px}
+</style>
+</head>
+<body>
+
+<section class="screen" id="home">
+  <h1 class="title"><span>Love</span> Letter</h1>
+  <div class="paper">
+    <div class="hearts"></div>
+    <div class="envelope" id="openLetter" aria-label="باز کردن نامه">
+      <div class="seal">❤</div>
+    </div>
+    <div class="caption">♡ Letter For You ♡</div>
+  </div>
+</section>
+
+<section class="screen" id="letter">
+  <h1 class="title"><span>Love</span> Letter</h1>
+  <div class="window">
+    <div class="bar"><b>LOVE</b><b>- □ X</b></div>
+    <div class="dots">♥ ♥ ♥</div>
+    <div class="qbox">
+      <div class="question">مدینه جان، میایی صفحه بعد؟ 🥺</div>
+      <div class="cat">🐱<br>❤️</div>
+      <div class="btns">
+        <button class="btn" id="yes">YES</button>
+        <button class="btn" id="no">NO</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="final">
+  <div class="final-paper">
+    <div class="heartbig">❤️</div>
+    <h1>تشکر مدینه جانم<br>بلاخره به هم رسیدیم 😭😭</h1>
+    <p>بعد از این همه انتظار، بالاخره رسیدیم به هم. ❤️</p>
+    <div class="small">♡ برای مدینه جان ♡</div>
+  </div>
+</section>
+
+<script>
+const home=document.getElementById('home');
+const letter=document.getElementById('letter');
+const final=document.getElementById('final');
+const no=document.getElementById('no');
+
+document.getElementById('openLetter').onclick=()=>{
+  home.style.display='none';
+  letter.style.display='flex';
+};
+
+function escapeNo(){
+  const x=(Math.random()*260)-130;
+  const y=(Math.random()*170)-85;
+  no.style.transform=`translate(${x}px,${y}px)`;
+}
+no.addEventListener('mouseenter',escapeNo);
+no.addEventListener('touchstart',(e)=>{e.preventDefault();escapeNo()});
+no.addEventListener('click',(e)=>{e.preventDefault();escapeNo()});
+
+document.getElementById('yes').onclick=()=>{
+  letter.style.display='none';
+  final.style.display='flex';
+};
+</script>
+</body>
+</html>
